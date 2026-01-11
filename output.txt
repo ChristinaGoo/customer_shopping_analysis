@@ -1,0 +1,38 @@
+.
+├── LICENCE
+├── README.md
+├── customer_behaviour.session.sql
+├── data
+│   ├── processed
+│   │   └── customer_shopping_behavior_processed.csv
+│   └── raw
+│       └── customer_shopping_behavior.csv
+├── models
+├── notebooks
+│   └── customer_shopping_analysis.ipynb
+├── output.txt
+├── problem_statement.md
+├── pyproject.toml
+├── references
+├── reports
+│   ├── customer_shopping_behaviour_report.md
+│   └── figures
+├── requirements.txt
+├── sql_analysis.sql
+├── sql_analysis_pgadmin4.sql
+├── sql_analysis_report.txt
+├── src
+│   ├── __init__.py
+│   ├── config.py
+│   ├── dataset.py
+│   ├── features.py
+│   ├── modeling
+│   │   ├── __init__.py
+│   │   ├── predict.py
+│   │   └── train.py
+│   ├── plots.py
+│   └── services
+│       └── __init__.py
+└── uv.lock
+
+12 directories, 24 files

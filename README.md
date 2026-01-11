@@ -1,74 +1,80 @@
-# Data Project Template
+# 👨🏻‍💻 Customer Behavior Data Analyst Portfolio Project
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Project%20Template-2856f7" alt="Datalumina Project" />
-</a>
+This project is an analysis on customer shopping behaviour including all stages of data analysis: data preparation, feature engineering, using queries for gaining insights, visualisation and reporting.
 
-## Cookiecutter Data Science
-This project template is a simplified version of the [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org) template, created to suit the needs of Datalumina and made available as a GitHub template.
+## Problem Statement
+A leading retail company wants to better understand its customers' shopping
+behavior in order to improve sales, customer satisfaction, and long-term loyalty.
+The management team has noticed changes in purchasing patterns across demographics, product categories, and sales channels (online vs offline).
+They are particularly interested in uncovering which factors, such as 
 
-## Adjusting .gitignore
+- discounts, 
+- reviews, 
+- seasons, 
+- payment preferences, 
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
+drive consumer decisions and repeat purchases.
 
-```plaintext
-# exclude data from source control by default
-# /data/
-```
+You are tasked with analyzing the company's consumer behaviour dataset to answer the following overaching business questions: 
 
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
+**"How can the company leverage consumer shopping data to identify trends, improve customer engagement, and optimize marketing and product strategies?"**
 
-## Duplicating the .env File
-To set up your environment variables, you need to duplicate the `.env.example` file and rename it to `.env`. You can do this manually or using the following terminal command:
+## 🛠️ Tools Used
+
+- **Python**: Used for data wrangling and EDA
+
+- **SQL**: Main tool for analysis, running queries to gain insights
+
+- **PostgreSQL**: The chosen management system, ideal for handling the customer behaviour data
+
+- **Visual Studio Code**: Used as the main environment
+
+- **Looker Studio**: Creation of interactive dashboard with main insights for data-based decision making
+
+- **Gamma**: For creating and editing a presentation with the results
+
+- **Git & GitHub**: For version control and sharing the SQL scripts and analysis, ensuring project tracking.
+
+## 🚀 Workflow and setting up
+
+**Prerequisites**
+
+Create and activate a virtual environment, then install dependencies: 
 
 ```bash
-cp .env.example .env # Linux, macOS, Git Bash, WSL
-copy .env.example .env # Windows Command Prompt
+python -m venv.venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
+
+1. Clone or download the project files
+2. Clean the raw data from the [customer_shopping_behavior.csv](data/raw/customer_shopping_behavior.csv) using a Jupyter Notebook and Python
+3. Create a database in pgAdmin4 and load the database in Postgres
+
+    - For this you will need to update the credentials in the ```.env``` file with your own
+
+    ```sh
+    PGUSER= "username"
+    PGPASSWORD= "password"
+    PGHOST= "localhost"
+    PGPORT="5432"
+    PGDATABASE="customer_behaviour"
+    ```
+
+    - Load the database into SQL database running Python code
+
+    - Create `sql_analysis.sql`
+4. Run queries and analyse data
+5. Use Looker Studio for visualization and creating a Dashboard
+
+    ![Dashboard](reports/Dashboard.png)
 
 
-## Project Organization
 
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── README.md          <- The top-level README for developers using this project
-├── data
-│   ├── external       <- Data from third party sources
-│   ├── interim        <- Intermediate data that has been transformed
-│   ├── processed      <- The final, canonical data sets for modeling
-│   └── raw            <- The original, immutable data dump
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-└── src                         <- Source code for this project
-    │
-    ├── __init__.py             <- Makes src a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    │    
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    ├── plots.py                <- Code to create visualizations 
-    │
-    └── services                <- Service classes to connect with external platforms, tools, or APIs
-        └── __init__.py 
-```
+6. Reporting results in [Report](reports/[Report]customer_shopping_behaviour.pdf) and creating a relevant [Presentation](reports/[Presentation]customer_shopping_behaviour.pdf)
+
+
+## Credits
+This project was inspired by [Amlan Mohanty's](https://www.youtube.com/watch?v=5PrZvPeUw60) video tutorial.
+

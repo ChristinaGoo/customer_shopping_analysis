@@ -108,6 +108,7 @@ WHERE previous_purchases > 5
 GROUP BY subscription_status
 
 
+
 -- 10. What is the revenue contribution of each age group?
 
 SELECT age_group,
@@ -115,3 +116,10 @@ SELECT age_group,
 FROM customer	   
 GROUP BY age_group
 ORDER BY total_revenue DESC
+
+
+
+
+
+
+

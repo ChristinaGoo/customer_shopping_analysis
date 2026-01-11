@@ -96,7 +96,7 @@ target/
 # /data/
 
 #exclude tree structure
-output.txt/
+output.txt
 
 #exclude report text files
-sql_analysis_report.txt/
+sql_analysis_report.txt
